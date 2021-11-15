@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 export default function Match(props) {
   const [match, useMatch] = useState("");
 
-  let MapConv = (map) => {
+  let mapConv = (name) => {
     let maps = {
       Baltic_Main: "Erangel",
       Chimera_Main: "Paramo",
@@ -16,8 +16,7 @@ export default function Match(props) {
       Summerland_Main: "Karakin",
       Tiger_Main: "Taego"
     };
-
-    // if()
+    return maps[name];
   };
 
   let config = {
@@ -46,7 +45,7 @@ export default function Match(props) {
 
   return (
     <div>
-      <h1>{match.mapName}</h1>
+      <h1>{mapConv(match.mapName)}</h1>
       <h2>{match.gameMode}</h2>
     </div>
   );
