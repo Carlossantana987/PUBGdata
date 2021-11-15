@@ -1,0 +1,2 @@
+# pubgData
+Created with CodeSandbox
