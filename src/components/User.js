@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Match from "./Match";
+import "../CSS/user.scss";
 
 export default function User() {
   const [userName, setUserName] = useState("");
@@ -15,7 +16,7 @@ export default function User() {
 
   useEffect(() => {
     const url =
-      "https://api.pubg.com/shards/steam/players?filter[playerNames]=Digitalspit";
+      "https://api.pubg.com/shards/steam/players?filter[playerNames]=R360RN";
 
     const fetchData = async () => {
       try {
@@ -33,8 +34,8 @@ export default function User() {
   }, []);
 
   return (
-    <div>
-      {/* <h1>{userName}</h1> */}
+    <div className="userContainer">
+      <h1>{userName}</h1>
       <ul>
         {Object.values(matches).map((i) => (
           <li key={i.id}>

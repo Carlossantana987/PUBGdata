@@ -1,3 +1,6 @@
+@import "./design-token/css-variables.scss";
+@import "./design-token//_scss-variables.scss";
+
 .App {
   font-family: sans-serif;
   text-align: center;
