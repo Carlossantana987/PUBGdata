@@ -23,7 +23,6 @@ export default function User() {
         const res = await fetch(url, config);
         const json = await res.json();
         setUserName(json.data[0].attributes.name);
-        // setMatches(json.data.matches.data);
         setMatches(Object.values(json.data[0].relationships.matches.data));
       } catch (error) {
         console.log(error.message);
@@ -31,13 +30,14 @@ export default function User() {
     };
 
     fetchData();
-  }, []);
+  });
 
   return (
-    <div className="userContainer">
+    <div>
+      <div className="userContainer" />
       <h1>{userName}</h1>
       <ul>
-        {Object.values(matches).map((i) => (
+        {Object.values(matches).map((i, config) => (
           <li key={i.id}>
             <Match config={config} id={i.id} type={i.type} />
           </li>
