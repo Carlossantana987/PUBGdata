@@ -34,7 +34,7 @@ export default function User() {
 
   return (
     <div>
-      <div className="userContainer" />
+      <div className="userContainer">
       <h1>{userName}</h1>
       <ul>
         {Object.values(matches).map((i, config) => (
@@ -43,6 +43,7 @@ export default function User() {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }
