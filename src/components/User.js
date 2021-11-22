@@ -61,27 +61,27 @@ export default function User() {
 
 
 
-  // useEffect(() => {
-  //   const url =
-  //     "https://api.pubg.com/shards/steam/players?filter[playerNames]=R360RN";
+  useEffect(() => {
+    const url =
+      "https://api.pubg.com/shards/steam/players?filter[playerNames]=R360RN";
 
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await fetch(url, config);
-  //       const json = await res.json();
-  //       setUserName(json.data[0].attributes.name);
-  //       let array = []
-  //       for(let i=0; i<10; i++){
-  //         array.push(json.data[0].relationships.matches.data[i])
-  //       }
-  //       setMatches(array)
-  //     } catch (error) {
-  //       console.log(error.message);
-  //     }
-  //   };
+    const fetchData = async () => {
+      try {
+        const res = await fetch(url, config);
+        const json = await res.json();
+        setUserName(json.data[0].attributes.name);
+        let array = []
+        for(let i=0; i<10; i++){
+          array.push(json.data[0].relationships.matches.data[i])
+        }
+        setMatches(array)
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
 
-  //   fetchData();
-  // });
+    fetchData();
+  });
 
   return (
     <div>
