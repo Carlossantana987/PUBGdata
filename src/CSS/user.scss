@@ -1,0 +1,200 @@
+@import './colors.scss';
+
+.userContainer {
+  width:50%;
+  margin:auto 0px;
+  height:100%;
+
+  h1{
+    font-size: 1.5rem;
+    color:White;
+  }
+}
+
+
+
+:root{
+  --bg-shape-color:linear-gradient(120deg,  #343A4F, #0F1620) ;
+ --lightblue: #3D9DEA;
+ --darkblue: #4A4EEE;
+ --text-color: #D5E1EF;
+}
+
+
+
+
+
+
+.wrapper{
+  width:350px;
+  border-radius: 40px;
+  background-image: var(--bg-shape-color);
+  overflow: hidden;
+  position: absolute;
+  top:20%;
+  left:20%;
+}
+.overviewInfo, .productSpecifications {
+  padding: 24px;
+}
+
+.userName{
+  width:100%;
+  color:black !important;
+}
+
+.count{
+  border-radius: 40px;
+  background:black;
+}
+
+.overviewInfo{
+  background-position:center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.overviewInfo.Range_Main{
+  background-image: url(../assets/Camp_Jackal.jpeg);
+}
+.overviewInfo.Baltic_Main{
+  background-image: url(../assets/Erangel.jpeg);
+}
+.overviewInfo.Heaven_Main{
+  background-image: url(../assets/Haven.jpeg);
+}
+.overviewInfo.Summerland_Main{
+  background-image: url(../assets/Karakin.jpg);
+}
+.overviewInfo.Desert_Main{
+  background-image: url(../assets/Miramar.jpeg);
+}
+.overviewInfo.Chimera_Main{
+  background-image: url(../assets/Paramo.jpeg);
+}
+.overviewInfo.Savage_Main{
+  background-image: url(../assets/Sanhok.jpeg);
+}
+.overviewInfo.Tiger_Main{
+  background-image: url(../assets/Taego.jpeg);
+}
+.overviewInfo.DihorOtok_Main{
+  background-image: url(../assets/Vikendi.jpeg);
+}
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  
+  .cartbutton{
+    position:relative;
+  }
+  .cartbutton::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-image: linear-gradient(90deg, #489be2, #0f629c);
+    border-radius: 50%;
+    position: absolute;
+    top: 11px;
+    right: 8px;
+}
+  
+  .cartbutton svg {
+    color: #ababab73;
+}
+  .backbutton, .cartbutton{
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+.neurobutton{
+  background-image: var(--bg-shape-color);
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255,255,255,0.1), 2px 2px 6px 3px rgba(0,0,0,0.4);
+}
+
+.productinfo {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 200px;
+    margin-bottom: 50px;
+}
+ 
+.grouptext{
+h3 {
+    letter-spacing: 3.2px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    background: white;
+    padding: 6px 29px;
+    border-radius: 17px;
+}
+  p {
+    font-size: 13px;
+    // opacity: 0.8;
+    color:white;
+    margin-bottom: 2px;
+    border-bottom:1px solid white;
+
+  } 
+  
+}
+
+
+/* product specifications */
+.featureIcon{
+  width: 40px;
+  height: 40px;
+  border-radius: 8px; 
+    margin-right: 16px;
+
+    .kills{
+      background-image: url(../assets/kills.png);
+    }
+}
+
+
+.productSpecifications{
+  color:white;
+
+  h1{
+    margin-top: 10px; 
+    margin-bottom: 16px;
+    font-size: 32px;
+  }
+  
+  p {
+    opacity: 0.8;
+    font-size: 15px;
+    line-height: 1.5;
+}
+  
+  .productFeatures {
+    display: grid;
+    grid-template-columns: 8ch auto;
+    margin-top: 20px; 
+    grid-row-gap: 16px;
+    .feature{ display:flex;}
+  }
+}
+
+
+
+button{
+  border-radius:10px;
+  width:40%;
+  margin: 0px 10px;
+  background:white;
+}
